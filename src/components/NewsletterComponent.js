@@ -18,7 +18,7 @@ export class NewsletterComponent extends HTMLElement {
 
   async loadCSS(styles) {
     try {
-      const request = await fetch("/src/components/NewsletterComponent.css");
+      const request = await fetch("./src/components/NewsletterComponent.css");
       if (request.ok) {
         styles.textContent = await request.text();
       }

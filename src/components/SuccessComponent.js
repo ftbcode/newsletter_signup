@@ -18,7 +18,7 @@ export class SuccessComponent extends HTMLElement {
 
   async loadCSS(styles) {
     try {
-      const request = await fetch("/src/components/SuccessComponent.css");
+      const request = await fetch("./src/components/SuccessComponent.css");
       if (request.ok) {
         styles.textContent = await request.text();
       }
