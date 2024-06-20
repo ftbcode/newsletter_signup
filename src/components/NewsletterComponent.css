@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.main__img {
+  width: 100%;
+}
+
+.main__img img {
+  width: 100%;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px 32px;
+  gap: 20px;
+}
+
+.main__content-headline {
+  font-size: 2.5rem;
+  font-family: "Roboto-Bold";
+}
+
+.main__content-list {
+  list-style: none;
+}
+
+.main__content-list_item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.main__content-list_item img {
+  margin-right: 20px;
+}
+
+.main__content-email-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: "Roboto-Bold";
+}
+
+.main__content-email-input {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.main__content-email-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__content-email-input--error {
+  background-color: hsl(4, 100%, 87%);
+  color: hsl(4, 100%, 37%);
+  border-color: hsl(4, 100%, 37%);
+}
+
+.main__content-email-error {
+  color: hsl(4, 100%, 37%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: "Roboto-Bold";
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease;
+}
+
+.main__content-email-error--active {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 200ms, opacity 200ms ease;
+}
+
+.main__content-button {
+  padding: 20px;
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Roboto-Bold";
+  font-size: 1.1rem;
+}
+
+.main__content-button--disabled {
+  background-color: hsl(234, 29%, 10%);
+}
+
+@media (width > 800px) {
+  .main {
+    flex-direction: row-reverse;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .main__img {
+    flex: 1;
+  }
+
+  .main__content {
+    flex: 1;
+  }
+
+  .main__content-headline {
+    font-size: 3.5rem;
+  }
+
+  .main__content-list_item {
+    height: 40px;
+  }
+}

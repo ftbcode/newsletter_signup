@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto-Regular";
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(234, 29%, 20%);
+  min-height: 100vh;
+}

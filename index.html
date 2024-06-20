@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <script type="module" src="./src/index.js" defer></script>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <template id="newsletter-template">
+    <main class="main">
+      <div class="main__img">
+        <picture>
+          <source srcset="./assets/images/illustration-sign-up-mobile.svg" media="(max-width: 800px)">
+          <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 801px)">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="image of a browser with metrics">
+        </picture>
+      </div>
+      <div class="main__content">
+        <h1 class="main__content-headline">Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <div class="main__content-list">
+          <div class="main__content-list_item">
+            <img src="./assets/images/icon-list.svg" alt="">
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="main__content-list_item">
+            <img src="./assets/images/icon-list.svg" alt="">
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="main__content-list_item">
+            <img src="./assets/images/icon-list.svg" alt="">
+            <p>And much more!</p>
+          </div>
+        </div>
+
+        <div class="main__content-email">
+          <div class="main__content-email-group">
+            <label class="main__content-email-label" for="email-input">Email address</label>
+            <span class="main__content-email-error">Valid email required</span>
+          </div>
+
+          <input id="email-input" class="main__content-email-input" type="email" placeholder="email@company.com">
+        </div>
+
+        <button class="main__content-button">Subscribe to monthly newsletter</button>
+    </main>
+  </template>
+
+
+  <template id="success-template">
+    <div class="success">
+      <div class="success__content">
+        <div class="success__content-img">
+          <img src="/assets/images/icon-success.svg" alt="">
+        </div>
+        <h1 class="success__content-headline">Thanks for subscribing!</h1>
+        <p class="success__content-description"> A confirmation email has been sent to
+          <span>ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="success__content-button">Dismiss message</button>
+      </div>
+    </div>
+  </template>
+</body>
+
+</html>
