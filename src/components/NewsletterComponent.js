@@ -36,11 +36,15 @@ export class NewsletterComponent extends HTMLElement {
 
     this.inputListener = (event) => {
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      const isEmailValid = emailRegex.test(event.target.value);
+      const isEmailValid =
+        emailRegex.test(event.target.value) && event.target.value !== "";
+
+      console.log(isEmailValid);
 
       if (!isEmailValid) {
         inputField.classList.add("main__content-email-input--error");
         errorMessage.classList.add("main__content-email-error--active");
+        newsletterButton.disabled = true;
       } else {
         inputField.classList.remove("main__content-email-input--error");
         errorMessage.classList.remove("main__content-email-error--active");
